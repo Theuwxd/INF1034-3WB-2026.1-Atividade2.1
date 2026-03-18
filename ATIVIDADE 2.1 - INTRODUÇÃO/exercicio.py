@@ -10,7 +10,7 @@ t.fd(600)
 t.stamp()
 
 t.pu()
-t.goto(0,-300)
+t.goto(0, -300)
 t.pd()
 
 t.lt(90)
@@ -38,7 +38,8 @@ t.fillcolor(color)
 t.lt(90)
 t.fd(200)
 t.goto(100, 200)
-t.lt(180)
+for _ in range (2):
+    t.lt(90)
 t.fd(100)
 t.goto(250, 100)
 t.end_fill()
@@ -50,10 +51,12 @@ t.pd()
 color = textinput('obter cor', 'escolha uma cor')
 t.begin_fill()
 t.fillcolor(color)
-t.lt(180)
+for _ in range (2):
+    t.lt(90)
 t.fd(150)
 t.goto(50, -200)
-t.lt(180)
+for _ in range (2):
+    t.lt(90)
 t.fd(150)
 t.goto(250, -100)
 t.end_fill()
@@ -68,9 +71,21 @@ t.fillcolor(color)
 t.fd(60)
 t.goto(-150, -150)
 t.goto(-190, -200)
-t.lt(180)
+for _ in range (2):
+    t.lt(90)
 t.fd(60)
 t.goto(-290, -150)
-t.goto(-250,-100)
+t.goto(-250, -100)
 t.end_fill()
+
+# espiral
+t.pu()
+t.goto(0, 0)
+t.pd()
+
+
+for i in range(100):
+    t.fd(i)
+    t.lt(90)
+
 mainloop()
